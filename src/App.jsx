@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Skills from './components/Skills';
 import Works from './components/Works';
 
+
 function App() {
   return (
     <div >
@@ -14,6 +15,7 @@ function App() {
       <Skills />
       <Works />
       <Contact />
+
     </div>
   );
 }
