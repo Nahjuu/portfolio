@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     
-    <div className='fixed w-full h-20 flex justify-between items-center px-4 bg-slate-900 text-gray-300'>
+    <div className='fixed w-full h-20 flex justify-between items-center px-4 bg-slate-900 text-gray-300 z-50'>
       <div>
         <h1 className='font-thin text-2xl italic font-serif'>Nahuel Silva</h1>
       </div>
