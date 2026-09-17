@@ -3,7 +3,7 @@ import React from 'react';
 const Skills = () => {
   return (
    
-    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300'>
+    <div name='skills' className='cursor-default w-full h-screen bg-[#0a192f] text-gray-300'>
       
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           
@@ -40,8 +40,15 @@ const Skills = () => {
                   <p className='my-4'>Django</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <p className='my-4'>Sqlite</p>
+                  <p className='my-4'>SQLite</p>
               </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <p className='my-4'>TailwindCSS</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <p className='my-4'>Testing</p>
+              </div>
+              
           </div>
       </div>
     </div>

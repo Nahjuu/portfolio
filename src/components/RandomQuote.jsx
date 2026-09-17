@@ -32,7 +32,7 @@ const RandomQuote = () => {
   };
 
   return (
-    <div className="relative z-0 w-full md:w-[420px] flex flex-col items-center text-center">
+    <div className="cursor-default relative z-0 w-full md:w-[420px] flex flex-col items-center text-center">
       {/* Fixed height area so the layout doesn't jump with different quote lengths */}
       <div className="min-h-[200px] md:min-h-[220px] flex flex-col items-center justify-center">
         <p className="text-white text-lg md:text-2xl font-light leading-relaxed">
