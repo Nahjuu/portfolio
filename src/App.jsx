@@ -8,14 +8,14 @@ import Works from './components/Works';
 
 function App() {
   return (
-    <div >
+    <>
       <Navbar />
       <Home />
       <About />
       <Skills />
       <Works />
       <Contact />
-    </div>
+    </>
   );
 }
 
