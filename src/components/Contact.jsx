@@ -22,7 +22,7 @@ const Contact = () => {
 
     try {
       // Petición HTTP POST al servidor Express enviando el estado formData como JSON
-      const response = await fetch('https://animated-invention-jj75pp95qj7vfqpr4-5000.app.github.dev/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

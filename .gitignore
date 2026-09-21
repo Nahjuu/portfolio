@@ -128,3 +128,5 @@ yarn-error.log*
 
 
 ./src/server/.env
+.vercel
+.env
