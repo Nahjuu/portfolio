@@ -45,7 +45,7 @@ const Works = () => {
               </h1>
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-700/90 p-6 opacity-0 backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
                 <span className="cursor-default mb-2 text-xl font-bold tracking-wider text-white">
-                Eatbud (Soon to be deployed)
+                Eatbud 
                 </span>
                 <p className="cursor-default mb-6 text-center text-sm text-slate-200">
                 A calorie tracking app with AI integration that allows users to track their meals and get nutritional information.
