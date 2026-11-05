@@ -4,9 +4,15 @@
  */
 export const projects = [
   {
+    title: 'Workshop Tickets Manager (In progress)',
+    description: 'A webpage for managing workshop tickets, based in a phone company system',
+    tags: ['React', 'Node.js', 'Express', 'TailwindCSS'],
+    code: 'https://github.com/Nahjuu/workshop-ticket-system'
+  },
+  {
     title: 'Portfolio',
     description: 'Portfolio where I showcase all my skills and projects!',
-    tags: ['React', 'TailwindCSS'],
+    tags: ['React', 'TailwindCSS', 'APIs Integration'],
     demo: '/',
     code: 'https://github.com/Nahjuu/portfolio',
   },
@@ -14,8 +20,9 @@ export const projects = [
     title: 'Eatbud',
     description:
       'A calorie tracking app with AI integration that allows users to track their meals and get nutritional information.',
-    tags: ['AI integration'],
+    tags: ['React', 'Node.js', 'Express', 'TailwindCSS','AI integration'],
     code: 'https://github.com/Nahjuu/Eatbud',
+    demo: 'https://eatbud.vercel.app/'
   },
   {
     title: 'freeCodeCamp Projects',
