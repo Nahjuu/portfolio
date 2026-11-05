@@ -1,0 +1,65 @@
+/*
+ * Print stylesheet: Ctrl/Cmd+P turns the portfolio into a clean A4 resume.
+ * Elements marked with data-print="hide" are removed from the printed page.
+ */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-print="hide"] {
+    display: none !important;
+  }
+
+  .card-surface,
+  [data-print="block"] {
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  section {
+    padding-block: 1.25rem !important;
+    break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #0f172a !important;
+    break-after: avoid;
+  }
+
+  .text-gradient {
+    background: none !important;
+    color: #0e7490 !important;
+  }
+
+  p,
+  li,
+  dd,
+  dt {
+    color: #334155 !important;
+  }
+
+  a {
+    color: #0e7490 !important;
+    text-decoration: none;
+  }
+
+  /* Surface real links on paper */
+  .print-links a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #475569 !important;
+  }
+}

@@ -1,0 +1,40 @@
+/*
+ * Reusable utility layer.
+ * Keep these small and composable: components combine them with regular utilities.
+ */
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
+
+@utility section-shell {
+  @apply relative w-full py-24 sm:py-28;
+}
+
+/* Glass-free on purpose: backdrop-filter on many cards is expensive on mobile */
+@utility card-surface {
+  @apply rounded-card border border-white/10 bg-ink-800/80 shadow-card transition-all duration-300 ease-snappy;
+}
+
+@utility text-gradient {
+  @apply bg-gradient-to-r from-accent-300 via-accent-400 to-blue-400 bg-clip-text text-transparent;
+}
+
+/* Decorative grid, faded with a radial mask */
+@utility bg-grid {
+  background-image: linear-gradient(to right, rgb(148 163 184 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(148 163 184 / 0.07) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+/*
+ * Scroll-driven reveal, CSS only.
+ * Browsers without `animation-timeline` resolve the duration to 0s,
+ * so the element simply stays visible (safe progressive enhancement).
+ */
+@utility reveal {
+  animation: fade-up linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 35%;
+}

@@ -1,86 +1,77 @@
-import React from 'react';
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
+import Section from './ui/Section';
+import Container from './ui/Container';
+import SectionHeading from './ui/SectionHeading';
+import Button from './ui/Button';
+import { projects } from '../data/projects';
 
 const Works = () => {
   return (
-    // Main container with responsive height
-    <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        {/* Section header */}
-        <div className='pb-8 w-full flex justify-center items-center flex-col'>
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-cyan-500'>Work</p>
-          <p className='py-6 text-2xl'>Check out some of my most recent work</p>
-        </div>
+    <Section id="work" className="bg-ink-950">
+      <Container>
+        <SectionHeading
+          eyebrow="03 — Work"
+          title="Work"
+          subtitle="Check out some of my most recent work"
+        />
 
-        {/* Project grid */}
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          {/* Project card with hover overlay */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-            <div className="group relative flex h-53 w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-slate-600/30 bg-slate-800/70 shadow-lg transition-all duration-500 hover:shadow-xl">
-              <h1 className="text-4xl font-bold text-slate-100 transition-opacity duration-500 group-hover:opacity-0">
-              Portfolio
-              </h1>
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-700/90 p-6 opacity-0 backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
-                <span className="cursor-default mb-2 text-xl font-bold tracking-wider text-white">
-                Personal Portfolio
-                </span>
-                <p className="cursor-default mb-6 text-center text-sm text-slate-200">
-                Portfolio where I showcase all my skills and projects!
-                </p>
-                <div className="flex gap-4">
-                  <a href="/" className="w-28 rounded-lg bg-slate-100 py-2 text-center font-bold text-slate-800 transition-colors hover:bg-white hover:text-black">
-                  Demo
-                  </a>
-                  <a href="https://github.com/Nahjuu/portfolio" className="w-28 rounded-lg bg-slate-100 py-2 text-center font-bold text-slate-800 transition-colors hover:bg-white hover:text-black">
-                  Code
-                  </a>
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map(({ title, description, tags, demo, code }) => (
+            <li key={title} className="reveal">
+              <article className="card-surface print-links group flex h-full flex-col overflow-hidden hover:-translate-y-1 hover:border-accent-400/40 hover:shadow-glow">
+                {/* Cover */}
+                <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-ink-700/70 via-ink-800 to-ink-950">
+                  <div aria-hidden="true" className="absolute inset-0 bg-grid opacity-70" />
+                  <h3 className="relative px-5 text-center text-2xl font-bold tracking-tight text-mist-100 sm:text-3xl">
+                    {title}
+                  </h3>
                 </div>
-              </div>
-            </div>
-          </div>
-          {/* next card */}
-          <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-            <div className="group relative flex h-53 w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-slate-600/30 bg-slate-800/70 shadow-lg transition-all duration-500 hover:shadow-xl">
-              <h1 className="text-4xl font-bold text-slate-100 transition-opacity duration-500 group-hover:opacity-0">
-              Eatbud
-              </h1>
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-700/90 p-6 opacity-0 backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
-                <span className="cursor-default mb-2 text-xl font-bold tracking-wider text-white">
-                Eatbud 
-                </span>
-                <p className="cursor-default mb-6 text-center text-sm text-slate-200">
-                A calorie tracking app with AI integration that allows users to track their meals and get nutritional information.
-                </p>
-                <div className="flex gap-4">
-                  <a href="https://github.com/Nahjuu/Eatbud" className="w-28 rounded-lg bg-slate-100 py-2 text-center font-bold text-slate-800 transition-colors hover:bg-white hover:text-black">
-                  Code
-                  </a>
-                </div>   
-              </div>
-            </div>
-          </div>
-          <div className='text-center shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-            <div className="group relative flex h-53 w-full flex-col items-center justify-center overflow-hidden rounded-xl border border-slate-600/30 bg-slate-800/70 shadow-lg transition-all duration-500 hover:shadow-xl">
-              <h1 className="text-4xl font-bold text-slate-100 transition-opacity duration-500 group-hover:opacity-0">
-              freeCodeCamp Projects
-              </h1>
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-700/90 p-6 opacity-0 backdrop-blur-sm transition-opacity duration-500 group-hover:opacity-100">
-                <span className="cursor-default mb-2 text-xl font-bold tracking-wider text-white">
-                freeCodeCamp Certification Projects
-                </span>
-                <p className="cursor-default mb-6 text-center text-sm text-slate-200">
-                A repository containing all the projects I completed for the freeCodeCamp certifications.
-                </p>
-                <div className="flex gap-4">
-                  <a href="https://github.com/Nahjuu/freecodecamp-certification-projects" className="w-28 rounded-lg bg-slate-100 py-2 text-center font-bold text-slate-800 transition-colors hover:bg-white hover:text-black">
-                  Code
-                  </a>
-                </div>   
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+                {/* Body */}
+                <div className="flex flex-1 flex-col p-5">
+                  <p className="text-sm leading-relaxed text-mist-400">{description}</p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-[11px] text-mist-400"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-auto flex flex-wrap gap-3 pt-6">
+                    {demo && (
+                      <Button as="a" href={demo} variant="secondary" size="sm">
+                        <FiExternalLink aria-hidden="true" />
+                        Demo
+                      </Button>
+                    )}
+
+                    {code && (
+                      <Button
+                        as="a"
+                        href={code}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="secondary"
+                        size="sm"
+                      >
+                        <FaGithub aria-hidden="true" />
+                        Code
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </Section>
   );
 };
 
